@@ -1,0 +1,28 @@
+{
+  "name": "docs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Source for the official Pi-hole documentation",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pi-hole/docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/pi-hole/docs/issues"
+  },
+  "homepage": "https://docs.pi-hole.net/",
+  "scripts": {
+    "build": "mkdocs build --clean",
+    "markdownlint": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules/**\"",
+    "linkinator": "npm run build && linkinator site --recurse --silent --skip \"^(?!http://localhost)\"",
+    "test": "npm run markdownlint && npm run linkinator"
+  },
+  "devDependencies": {
+    "linkinator": "^3.0.3",
+    "markdownlint-cli2": "0.4.0"
+  }
+}

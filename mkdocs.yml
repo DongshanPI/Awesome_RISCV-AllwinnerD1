@@ -1,0 +1,138 @@
+site_name: 'Awesome RISCV Allwinner D1'
+site_url: 'https://riscv.100ask.net/'
+repo_url: 'https://github.com/DongshanPI/Awesome_RISCV-AllwinnerD1'
+edit_uri: 'https://github.com/DongshanPI/Awesome_RISCV-AllwinnerD1/tree/master/docs/'
+copyright: 'Copyright &copy; 2008 - 2022 100ask Team'
+remote_branch: gh-pages
+theme:
+  name: 'material'
+  custom_dir: overrides
+#  icon:
+#    repo: fontawesome/brands/github-alt
+  favicon: 'images/favicon.png'
+  logo: 'images/dsp-logo.svg'
+  language: 'zh'
+  font:
+    text: 'Source Sans Pro'
+    code: 'Roboto Mono'
+  features:
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+
+markdown_extensions:
+  # Code highlighting in ``` ``` blocks
+  - codehilite:
+      guess_lang: true
+  # Table of Contents
+  - toc:
+      permalink: true
+  # block-styled side content
+  - admonition
+  # linkifies URL and email links without having to wrap them in Markdown syntax. Also, allows shortens repository issue, pull request, and commit links.
+  - pymdownx.magiclink
+  # Task lists (https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/)
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # Highlight words with ==mark me==
+  - pymdownx.mark
+  # Adds support for deletion ~~Delete me~~ and subscript text~a\ subscript~
+  - pymdownx.tilde
+  # This extension is a convenience extension which includes many pymdownx extensions
+  # (https://facelessuser.github.io/pymdown-extensions/extensions/extra/)
+  - pymdownx.extra
+  # (https://facelessuser.github.io/pymdown-extensions/extensions/details/)
+  - pymdownx.details
+  # Tabbed provides a syntax to easily add tabbed Markdown content.
+  # https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
+  - pymdownx.tabbed
+  # Adds syntax for defining footnotes in Markdown documents (https://python-markdown.github.io/extensions/footnotes/)
+  - footnotes
+  # Adds the ability to define abbreviations
+  - abbr
+  # Include files in other documents like {!some/dir/in/docs/filename.md!}
+  - markdown_include.include:
+      base_path: docs
+  # Metadata support in pages
+  # (https://squidfunk.github.io/mkdocs-material/extensions/metadata/)
+  - meta
+
+nav:
+  - 网站简述: index.md
+  - 'About Pi-hole':
+    - 'Contact Us': main/contact.md
+    - 'Pi-hole Origins': main/origins.md
+    - 'On the Web': main/coverage.md
+  - 'Getting Started':
+    - 'Prerequisites': main/prerequisites.md
+    - 'Installation': main/basic-install.md
+    - 'Post-Install': main/post-install.md
+    - 'Updating': main/update.md
+    - 'Uninstalling': main/uninstall.md
+  - 'Pi-hole Core':
+    - 'The &nbsp<samp>pihole</samp>&nbsp command': core/pihole-command.md
+  - 'Databases':
+    - 'Overview': database/index.md
+    - 'Query database': database/ftl.md
+    - 'Domain database':
+      - 'Overview': database/gravity/index.md
+      - 'Group management': database/gravity/groups.md
+      - 'Examples': database/gravity/example.md
+      - 'Database recovery': database/gravity/recovery.md
+
+extra:
+  social:
+    - icon: fontawesome/solid/earth-americas
+      link: https://www.100ask.net
+      name: Website
+    - icon: fontawesome/brands/github
+      link: https://github.com/dongshanpi
+      name: GitHub
+  analytics:
+    provider: google
+    property: G-LZX4K52CZ1
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- # 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target=_blank>feedback form</a>.    
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 中文
+      link: /
+      lang: zh
+
+extra_css:
+  - extra.css
