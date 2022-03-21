@@ -14,7 +14,7 @@ env:
   PYTHON_VERSION: "3.8"
 
 jobs:
-  test:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
