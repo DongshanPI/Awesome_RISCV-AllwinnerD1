@@ -79,27 +79,37 @@ markdown_extensions:
   - meta
 
 nav:
-  - 网站简述: index.md
-  - 'About Pi-hole':
-    - 'Contact Us': main/contact.md
-    - 'Pi-hole Origins': main/origins.md
-    - 'On the Web': main/coverage.md
-  - 'Getting Started':
-    - 'Prerequisites': main/prerequisites.md
-    - 'Installation': main/basic-install.md
-    - 'Post-Install': main/post-install.md
-    - 'Updating': main/update.md
-    - 'Uninstalling': main/uninstall.md
-  - 'Pi-hole Core':
-    - 'The &nbsp<samp>pihole</samp>&nbsp command': core/pihole-command.md
-  - 'Databases':
-    - 'Overview': database/index.md
-    - 'Query database': database/ftl.md
-    - 'Domain database':
-      - 'Overview': database/gravity/index.md
-      - 'Group management': database/gravity/groups.md
-      - 'Examples': database/gravity/example.md
-      - 'Database recovery': database/gravity/recovery.md
+  - 站点简述: index.md
+  - '支持的硬件':
+    - '东山哪吒STU': 
+      - '资源介绍': main/prerequisites.md
+      - '快速上手': main/prerequisites.md
+      - '常见问题':  main/prerequisites.md  
+    - 'MQ-PRO': 
+      - '资源介绍': main/prerequisites.md
+      - '快速上手': main/prerequisites.md
+      - '常见问题':  main/prerequisites.md            
+    - '哪吒开发板': 
+      - '资源介绍': main/prerequisites.md
+      - '快速上手': main/prerequisites.md
+      - '常见问题':  main/prerequisites.md
+  - '手册资料':
+    - '芯片手册': main/prerequisites.md
+    - '硬件资料': main/prerequisites.md
+  - '支持的SDK':
+    - 'Tina-SDK':
+      - 'SDK介绍': main/prerequisites.md
+      - '使用方法': main/prerequisites.md
+    - 'Buildroot':
+      - 'SDK介绍': main/prerequisites.md
+      - '使用方法': main/prerequisites.md      
+  - '开发文档':
+    - 'SDK开发文档':
+      - 'SDK介绍': main/prerequisites.md
+      - '使用方法': main/prerequisites.md
+  - '开发示例':
+    - 'SDK开发文档':
+      - 'SDK介绍': main/prerequisites.md
 
 extra:
   social:
