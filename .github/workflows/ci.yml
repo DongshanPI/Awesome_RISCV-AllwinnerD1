@@ -36,6 +36,6 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
-
-      - name Push docs      
+        
+      - name: Push Docs
         run: mkdocs gh-deploy --force
