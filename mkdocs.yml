@@ -21,24 +21,27 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - navigation.sections
+#    - navigation.tabs
+
   palette:
 
     # Light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: teal
-      toggle:
-        icon: material/lightbulb-outline
-        name: Switch to dark mode
-
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: red
       accent: red
       toggle:
         icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/lightbulb-outline
         name: Switch to light mode
 
 markdown_extensions:
