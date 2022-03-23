@@ -31,7 +31,6 @@ last_updated: Thur May 02 12:00:00 2022 UTC
     - AW-OL交流社区板块：https://bbs.aw-ol.com/
     - whycan交流社区板块：https://whycan.com/forumlist.php
 - **参与页面维护**: 此页面全都托管在GitHub 仓库中，可以点击页面的右上角 🖊 图标进行编辑。
-
 ---
 
 ## 整站资料索引
@@ -133,14 +132,43 @@ last_updated: Thur May 02 12:00:00 2022 UTC
 	- D1s_Datasheet_V1.0.pdf
 	- D1s_User Manual_V1.0.pdf
 
+#### XuantieC906资料
+ - 玄铁C906介绍: https://occ.t-head.cn/vendor/cpu/index?id=3817197695983423488&key=index#sticky
+ - 玄铁C906 R1S0用户手册：
+ - C906工具链下载：https://occ.t-head.cn/community/download?id=3813254164830822400
 ### 系统&组件
 #### Tina-SDK系统
-- 源码仓库地址: https://gitlab.com/weidongshan/tina-d1-h.git
-- 使用介绍: 
+ - 源码仓库地址: https://gitlab.com/weidongshan/tina-d1-h.git
+ - 使用介绍: https://d1.docs.aw-ol.com/study/study_4compile/
 #### Buildroot-SDK
-- 源码仓库地址: https://gitee.com/weidongshan/neza-d1-buildroot
-- 使用介绍： https://gitee.com/weidongshan/neza-d1-buildroot/blob/master/README.md
+ - 源码仓库地址: https://gitee.com/weidongshan/neza-d1-buildroot
+ - 使用介绍： https://gitee.com/weidongshan/neza-d1-buildroot/blob/master/README.md
+
+#### RT-Smart
+ - 源码仓库地址: https://gitee.com/
+ - 使用介绍： https://gitee.com/weidongshan/neza-d1-buildroot/blob/master/README.md
 
 ### 开发工具
+#### 交叉编译工具链
+ - Tina-SDK V1.0 : https://gitlab.com/weidongshan/Toolchain/-/raw/master/riscv64-glibc-gcc-thead_20200702.tar.xz
+ - Tina-SDK V2.0 : https://gitlab.com/weidongshan/Toolchain/-/raw/master/riscv64-glibc-gcc-thead_20200702.tar.xz
+ - Buildroot-2021 : 
+ - Buildroot-2022 :
 #### 系统烧写工具
+ - 全志官方工具
+    - 全志系统TF卡烧写工具：PhoenixCardv4.2.7.7z.7z
+    - 全志系统OTG烧写工具：AllwinnertechPhoeniSuitRelease20201225.zip.zip
+ - 社区版本烧写工具
+    - TF卡完整烧写工具： win32diskimager-1.0.0-install.exe
+    - TF卡格式化工具：SDCardFormatterv5_WinEN.zip
+### 镜像文件
+#### 全志官方系统镜像
+ - D1-H芯片系列镜像
+    - D1-H哪吒HDMI测试固件.img
+    - D1-H哪吒HDMI测试固件20210804（开机HDMI就有小企鹅启动logo）.img
+    - D1-H哪吒sunxi-dev20210820测试固件更新nand list.img
+    - tina_d1-hdmionly_ucgui_demo_uart0_20220110.img.gz
 
+#### Buildroot系统镜像
+
+#### 个人发行版系统镜像
