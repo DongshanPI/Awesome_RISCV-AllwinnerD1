@@ -15,7 +15,7 @@
     
     
       
-        <title>05 Tina SDKDevelopmentGuide - Awesome RISCV Allwinner D1</title>
+        <title>Tina-SDK V2.0开发指南 - Awesome RISCV Allwinner D1</title>
       
     
     
@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tina-sdk" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              05 Tina SDKDevelopmentGuide
+              Tina-SDK V2.0开发指南
             
           </span>
         </div>
@@ -280,14 +285,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -308,12 +315,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       
       
@@ -336,8 +345,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
-        资源介绍
+      <a href="../01-BoardIntroduction/" class="md-nav__link">
+        主板介绍
       </a>
     </li>
   
@@ -350,8 +359,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
-        快速上手
+      <a href="../02-SupportingResources/" class="md-nav__link">
+        主板资源
       </a>
     </li>
   
@@ -364,8 +373,180 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
+      <a href="../03-QuickStart/" class="md-nav__link">
+        快速开始
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-SomeQustion/" class="md-nav__link">
         常见问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tina-SDK V2.0开发指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tina-SDK V2.0开发指南
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    获取源码
+  </a>
+  
+    <nav class="md-nav" aria-label="获取源码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    网盘获取
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    全志客户服务获取
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置主机环境
+  </a>
+  
+    <nav class="md-nav" aria-label="配置主机环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-1604" class="md-nav__link">
+    ubuntu-16.04
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-1804" class="md-nav__link">
+    ubuntu-18.04
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    配置&amp;编译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    打包&amp;烧写
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Buildroot2021DevelopmentGuide/" class="md-nav__link">
+        Buildroot2021开发指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Buildroot2022DevelopmentGuide/" class="md-nav__link">
+        Buildroot2022开发指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-RT-smartDevelopmentGuide/" class="md-nav__link">
+        RT-Smart开发指南
       </a>
     </li>
   
@@ -411,8 +592,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
-        资源介绍
+      <a href="../../MQ-Pro/01-BoardIntroduction/" class="md-nav__link">
+        主板介绍
       </a>
     </li>
   
@@ -425,8 +606,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
-        快速上手
+      <a href="../../MQ-Pro/02-SupportingResources/" class="md-nav__link">
+        主板资源
       </a>
     </li>
   
@@ -439,8 +620,78 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
+      <a href="../../MQ-Pro/03-QuickStart/" class="md-nav__link">
+        快速开始
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/04-SomeQustion/" class="md-nav__link">
         常见问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/05-Tina-SDKDevelopmentGuide/" class="md-nav__link">
+        Tina-SDK V2.0开发指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/05-Buildroot2021DevelopmentGuide/" class="md-nav__link">
+        Buildroot2021开发指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/05-Buildroot2022DevelopmentGuide/" class="md-nav__link">
+        Buildroot2022开发指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/05-RT-smartDevelopmentGuide/" class="md-nav__link">
+        RT-Smart开发指南
       </a>
     </li>
   
@@ -486,8 +737,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
-        资源介绍
+      <a href="../../MQ-Pro/01-BoardIntroduction/" class="md-nav__link">
+        主板介绍
       </a>
     </li>
   
@@ -500,8 +751,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
-        快速上手
+      <a href="../../MQ-Pro/02-SupportingResources/" class="md-nav__link">
+        主板资源
       </a>
     </li>
   
@@ -514,8 +765,78 @@
   
   
     <li class="md-nav__item">
-      <a href="../../main/prerequisites.md" class="md-nav__link">
+      <a href="../../MQ-Pro/03-QuickStart/" class="md-nav__link">
+        快速开始
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/04-SomeQustion/" class="md-nav__link">
         常见问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/05-Tina-SDKDevelopmentGuide/" class="md-nav__link">
+        Tina-SDK V2.0开发指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/05-Buildroot2021DevelopmentGuide/" class="md-nav__link">
+        Buildroot2021开发指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/05-Buildroot2022DevelopmentGuide/" class="md-nav__link">
+        Buildroot2022开发指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MQ-Pro/05-RT-smartDevelopmentGuide/" class="md-nav__link">
+        RT-Smart开发指南
       </a>
     </li>
   
@@ -802,10 +1123,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_5" type="checkbox" id="__nav_3_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_5">
+          应用开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="应用开发" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          应用开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../main/prerequisites.md" class="md-nav__link">
-        应用开发
+        运行第一个Helloword
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/prerequisites.md" class="md-nav__link">
+        LVGL界面开发
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -865,8 +1233,97 @@
   
     <li class="md-nav__item">
       <a href="../../main/prerequisites.md" class="md-nav__link">
-        使用方法
+        获取源码
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/prerequisites.md" class="md-nav__link">
+        配置环境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/prerequisites.md" class="md-nav__link">
+        编译&烧写
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_5" type="checkbox" id="__nav_3_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_5">
+          应用开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="应用开发" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          应用开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/prerequisites.md" class="md-nav__link">
+        运行第一个Helloword
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/prerequisites.md" class="md-nav__link">
+        LVGL界面开发
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -926,8 +1383,83 @@
   
     <li class="md-nav__item">
       <a href="../../main/prerequisites.md" class="md-nav__link">
-        使用方法
+        获取源码
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/prerequisites.md" class="md-nav__link">
+        配置环境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/prerequisites.md" class="md-nav__link">
+        编译&烧写
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_5" type="checkbox" id="__nav_3_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_5">
+          应用开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="应用开发" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          应用开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/prerequisites.md" class="md-nav__link">
+        运行第一个Helloword
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1125,6 +1657,100 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    获取源码
+  </a>
+  
+    <nav class="md-nav" aria-label="获取源码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    网盘获取
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    全志客户服务获取
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    配置主机环境
+  </a>
+  
+    <nav class="md-nav" aria-label="配置主机环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-1604" class="md-nav__link">
+    ubuntu-16.04
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-1804" class="md-nav__link">
+    ubuntu-18.04
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    配置&amp;编译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    打包&amp;烧写
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1136,9 +1762,74 @@
 
 
 
-  <h1>05 Tina SDKDevelopmentGuide</h1>
+<h1 id="tina-sdk">快速使用Tina-SDK 指南<a class="headerlink" href="#tina-sdk" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Tina-SDK开发HOST主机环境主要基于ubuntu-16.04及以上系统，其它系统暂未做过验证，请尽量使用 ubuntu-18.04。</li>
+</ul>
+<h2 id="_1">获取源码<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">网盘获取<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>由于整个<code>Tina-SDK V2.0</code>工程比较大，所以我们单独将其分卷压缩存放至 网盘内，可以点击此 传输链接获取：<a href="https://cowtransfer.com/s/adad917a1e5f43">https://cowtransfer.com/s/adad917a1e5f43</a> </li>
+<li>下载成功后，需要先拷贝到 Ubuntu系统目录下，请尽量准备足够的硬盘存储空间，建议至少保留 <strong>100G</strong>以上剩余空间。</li>
+<li>之后进入到 ubuntu系统目录下 执行解压缩命令<code>cat tina-d1-h.tar.gz.* | tar  zvx</code>等待解压缩完成。</li>
+<li>解压缩完成后，我们就可以开始配置HOST主机环境了</li>
+</ul>
+<h3 id="_3">全志客户服务获取<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>参考 <a href="https://d1.docs.aw-ol.com/study/study_2getsdk/">https://d1.docs.aw-ol.com/study/study_2getsdk/</a></li>
+</ul>
+<h2 id="_4">配置主机环境<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="ubuntu-1604">ubuntu-16.04<a class="headerlink" href="#ubuntu-1604" title="Permanent link">&para;</a></h3>
+<p>安装命令：  <br />
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip lib32z1 lib32z1-dev lib32stdc++6 libstdc++6 -y
+</code></pre></div></p>
+<h3 id="ubuntu-1804">ubuntu-18.04<a class="headerlink" href="#ubuntu-1804" title="Permanent link">&para;</a></h3>
+<p>安装命令：  <br />
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip lib32z1 lib32z1-dev lib32stdc++6 libstdc++6 -y
+sudo apt-get install libc6:i386 libstdc++6:i386 lib32ncurses5 lib32z1
+</code></pre></div></p>
+<h2 id="_5">配置&amp;编译<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>1.进入获取完成的<code>Tina-SDK V2.0</code>目录下，执行 <code>cd tina-d1-h/</code>即可进入目录内。
+2. 首先执行 <code>source build/envsetup.sh</code> 命令设置环境变量等待配置完成。会提示 <strong>Setup env done! Please run lunch next.</strong> 此段命令。
+3. 选择你要编译的目标方案配置名称，比如输入 <code>lunch d1-h_nezha-tina</code>说明指定编译d1-h tina方案，当然也可以输入 <code>lunch</code>命令显示所有的方案，在弹出的对话框中输入你要编译的方案序号。
+4. 配置好方案名称后，就可以执行 <code>make</code>命令来开始编译了，整个编译过程比较漫长，可以加上 <strong>-JN **参数来加速编译，这里</strong>N<strong>指的是CPU的个数一般可以以 CPU个数 x 线程数 进行指定。
+5. 编译完成后，相应的文件会输出到 **/out/d1_nezha-tina/</strong> 目录下，之后我们继续执行 <code>pack</code>打包命令，来进行打包操作。
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~$ <span class="nb">cd</span> tina-d1-h/
+book@virtual-machine:~/tina-d1-h$ <span class="nb">source</span> build/envsetup.sh
+Setup env <span class="k">done</span>! Please run lunch next.
+book@virtual-machine:~/tina-d1-h$ lunch
 
+You<span class="err">&#39;</span>re building on Linux
 
+Lunch menu... pick a combo:
+     <span class="m">1</span>. d1-h_nezha_min-tina
+     <span class="m">2</span>. d1-h_nezha-tina
+     <span class="m">3</span>. d1s_nezha-tina
+
+Which would you like?: <span class="nv">2</span>
+<span class="o">============================================</span>
+<span class="nv">TINA_BUILD_TOP</span><span class="o">=</span>/home/book/tina-d1-h
+<span class="nv">TINA_TARGET_ARCH</span><span class="o">=</span>riscv
+<span class="nv">TARGET_PRODUCT</span><span class="o">=</span>d1-h_nezha
+<span class="nv">TARGET_PLATFORM</span><span class="o">=</span>d1-h
+<span class="nv">TARGET_BOARD</span><span class="o">=</span>d1-h-nezha
+<span class="nv">TARGET_PLAN</span><span class="o">=</span>nezha
+<span class="nv">TARGET_BUILD_VARIANT</span><span class="o">=</span>tina
+<span class="nv">TARGET_BUILD_TYPE</span><span class="o">=</span>release
+<span class="nv">TARGET_KERNEL_VERSION</span><span class="o">=</span><span class="m">5</span>.4
+<span class="nv">TARGET_UBOOT</span><span class="o">=</span>u-boot-2018
+<span class="nv">TARGET_CHIP</span><span class="o">=</span><span class="nv">sun20iw1p1</span>
+<span class="o">============================================</span>
+no buildserver to clean
+<span class="o">[</span><span class="m">1</span><span class="o">]</span> <span class="m">20070</span>
+book@virtual-machine:~/tina-d1-h$ make -j16
+</code></pre></div>
+如上示例，我进入 tina-d1-h 目录 之后使用lunch命令 显示所有的支持方案，选中 第二个 d1-h_nezha-tina 之后 执行 make -j16开始编译，这里给大家提醒一下 我们的 <strong>东山哪吒STU</strong> 开发板支持 方案<strong>1. d1-h_nezha_min-tina</strong> 方案<strong>2. d1-h_nezha-tina</strong>。</p>
+<h2 id="_6">打包&amp;烧写<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>编译完成后，我们就可以执行 <code>pack</code>命令，将编译好的固件打包成一个 img 文件，用于后续烧写操作，固件路径在** /out/d1_nezha-tina/tina_d1-nezha_uart0.img** 以 方案名称_串口节点.img 进行命名。
+最后我们就可以参考页面左侧 <code>快速开始</code> 内 烧写 全志原厂 系统的说明文档进行烧写操作啦。</p>
 
               
             </article>
@@ -1153,6 +1844,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../04-SomeQustion/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 常见问题" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              常见问题
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../05-Buildroot2021DevelopmentGuide/" class="md-footer__link md-footer__link--next" aria-label="下一页: Buildroot2021开发指南" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Buildroot2021开发指南
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
