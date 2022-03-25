@@ -42,6 +42,11 @@ last_updated: Thur May 02 12:00:00 2022 UTC
     - DongshanNezhaSTU-Core-TOP.jpg
     - DongshanNezhaSTU_DIY-BASE_SCH_V1.0.pdf
     - DongshanNezhaSTU-DIY-BASE_v1.0.zip
+ - 配套手册：
+  
+ - 配套镜像： 
+  
+ - 购买链接： 
 #### 哪吒
  - 硬件设计：[存放位置](https://github.com/DongshanPI/Awesome_RISCV-AllwinnerD1/tree/master/Tina-SDK/Hardware%E7%A1%AC%E4%BB%B6%E7%B1%BB%E6%96%87%E6%A1%A3/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1)
     - D1-H_DEV_DDR3_16X2_V1_2.brd
@@ -138,12 +143,16 @@ last_updated: Thur May 02 12:00:00 2022 UTC
  - C906工具链下载：https://occ.t-head.cn/community/download?id=3813254164830822400
 ### 系统&组件
 #### Tina-SDK系统
- - 源码仓库地址: https://gitlab.com/weidongshan/tina-d1-h.git
+ - 源码地址: 
  - 使用介绍: https://d1.docs.aw-ol.com/study/study_4compile/
-#### Buildroot-SDK
- - 源码仓库地址: https://gitee.com/weidongshan/neza-d1-buildroot
+
+#### Buildroot-2021原厂最小系统版
+ - 源码仓库地址:  https://gitee.com/weidongshan/neza-d1-buildroot.git
  - 使用介绍： https://gitee.com/weidongshan/neza-d1-buildroot/blob/master/README.md
 
+#### Buildroot-2022社区主线版
+ - 源码仓库地址：https://buildroot.org/downloads/buildroot-2022.02.tar.gz
+ - 使用介绍：
 #### RT-Smart
  - 源码仓库地址: https://gitee.com/
  - 使用介绍： https://gitee.com/weidongshan/neza-d1-buildroot/blob/master/README.md
@@ -152,8 +161,9 @@ last_updated: Thur May 02 12:00:00 2022 UTC
 #### 交叉编译工具链
  - Tina-SDK V1.0 : https://gitlab.com/weidongshan/Toolchain/-/raw/master/riscv64-glibc-gcc-thead_20200702.tar.xz
  - Tina-SDK V2.0 : https://gitlab.com/weidongshan/Toolchain/-/raw/master/riscv64-glibc-gcc-thead_20200702.tar.xz
- - Buildroot-2021 : 
- - Buildroot-2022 :
+ - Buildroot-2021原厂系统版 :
+ - Buildroot-2022社区主线版 : 
+  
 #### 系统烧写工具
  - 全志官方工具
     - 全志系统TF卡烧写工具：PhoenixCardv4.2.7.7z.7z
@@ -161,14 +171,27 @@ last_updated: Thur May 02 12:00:00 2022 UTC
  - 社区版本烧写工具
     - TF卡完整烧写工具： win32diskimager-1.0.0-install.exe
     - TF卡格式化工具：SDCardFormatterv5_WinEN.zip
+#### 系统组件支持
+ - ncnn支持：
+ - Tengine支持：
+
 ### 镜像文件
 #### 全志官方系统镜像
- - D1-H芯片系列镜像
+ - D1-H芯片系列镜像:
     - D1-H哪吒HDMI测试固件.img
     - D1-H哪吒HDMI测试固件20210804（开机HDMI就有小企鹅启动logo）.img
     - D1-H哪吒sunxi-dev20210820测试固件更新nand list.img
     - tina_d1-hdmionly_ucgui_demo_uart0_20220110.img.gz
 
 #### Buildroot系统镜像
+ - Buildroot-2021原厂系统版：
+   - SDCard最小系统：
+   - 支持QT
+ - Buildroot-2022社区主线版：
+   - SDCard最小系统：
+   - 支持QT
 
 #### 个人发行版系统镜像
+ - Debian系列：
+
+ - Fedora系列：
