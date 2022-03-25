@@ -6,7 +6,7 @@ copyright: 'Copyright &copy; 2008 - 2022 100ask Team'
 remote_branch: gh-pages
 theme:
   name: 'material'
-  custom_dir: overrides
+#  custom_dir: overrides
 #  icon:
 #    repo: fontawesome/brands/github-alt
   favicon: 'images/favicon.png'
