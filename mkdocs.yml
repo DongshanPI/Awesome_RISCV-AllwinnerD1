@@ -6,7 +6,7 @@ copyright: 'Copyright &copy; 2008 - 2022 100ask Team'
 remote_branch: gh-pages
 theme:
   name: 'material'
-#  custom_dir: overrides
+  custom_dir: overrides
 #  icon:
 #    repo: fontawesome/brands/github-alt
   favicon: 'images/favicon.png'
@@ -83,7 +83,7 @@ markdown_extensions:
   - meta
 
 nav:
-  - 站点简述: index.md
+  - 站点简述: index.md 
   - '支持的硬件':
     - '东山哪吒STU': 
       - '资源介绍': main/prerequisites.md
@@ -96,14 +96,14 @@ nav:
     - '哪吒开发板': 
       - '资源介绍': main/prerequisites.md
       - '快速上手': main/prerequisites.md
-      - '常见问题':  main/prerequisites.md
-  - '构建系统&组件': 
-    - 'Tina-SDK_V2.0':
+      - '常见问题': main/prerequisites.md
+  - '构建系统&组件':  
+    - 'Tina-SDK_V2.0': 
       - 'SDK框架介绍': main/prerequisites.md
       - '获取源码': main/prerequisites.md
       - '配置环境': main/prerequisites.md
       - '编译&烧写': main/prerequisites.md
-      - '应用开发': 
+      - '应用开发':  
         - '运行第一个Helloword': main/prerequisites.md
         - 'USB摄像头拍照': main/prerequisites.md    
     - 'Buildroot-2021':
@@ -112,28 +112,20 @@ nav:
       - '配置环境': main/prerequisites.md
       - '编译&烧写': main/prerequisites.md
       - '应用开发': main/prerequisites.md
-    - 'Buildroot-2022':
+    - 'Buildroot-2022': 
       - 'SDK介绍': main/prerequisites.md
       - '使用方法': main/prerequisites.md      
-    - 'RT-Smart':
+    - 'RT-Smart': 
       - 'SDK介绍': main/prerequisites.md
       - '使用方法': main/prerequisites.md
-    - '组件':
+    - '组件': 
       - 'ncnn': main/prerequisites.md
       - 'xboot': main/prerequisites.md
-      - 'Tengine': main/prerequisites.md 
-  
-  - 'T-head C906资源':
-    - C906芯片资源: 
-      - 调试工具: main/prerequisites.md
-      - 支持的工具链: main/prerequisites.md
-
-
-
-
-
-
-
+      - 'Tengine': main/prerequisites.md
+  - 'T-head C906资源': 
+    - 'C906芯片资源': 
+      - '调试工具': main/prerequisites.md
+      - '支持的工具链': main/prerequisites.md
 extra:
   social:
     - icon: fontawesome/solid/earth-americas
