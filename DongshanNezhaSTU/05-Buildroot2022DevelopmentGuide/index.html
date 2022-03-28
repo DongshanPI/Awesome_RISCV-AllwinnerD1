@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#buildroot-2022linux" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -430,10 +435,84 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Buildroot2022开发指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Buildroot2022开发指南
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    配置环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    获取源码
+  </a>
+  
+    <nav class="md-nav" aria-label="获取源码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    获取社区版本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用百问网提供的版本
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    编译系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    烧写启动
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1558,6 +1637,80 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    配置环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    获取源码
+  </a>
+  
+    <nav class="md-nav" aria-label="获取源码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    获取社区版本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用百问网提供的版本
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    编译系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    烧写启动
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1569,9 +1722,177 @@
 
 
 
-  <h1>Buildroot2022开发指南</h1>
+<h1 id="buildroot-2022linux">使用buildroot-2022编译构建Linux主线最小系统<a class="headerlink" href="#buildroot-2022linux" title="Permanent link">&para;</a></h1>
+<p>支持的组件</p>
+<ul>
+<li>支持单独编译SPL。</li>
+<li>支持Opensbi V0.9版本</li>
+<li>支持uClibc库，Glibc库等</li>
+<li>支持u-boot-2021.10 版本</li>
+<li>支持LinuxKernel  5.14.0-rc4 版本</li>
+</ul>
+<h2 id="_1">配置环境<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>我们编译使用的是ubuntu 18.04 系统，在进行如下编译之前需要先配置基本编译环境，参考下述命令来安装必须的软件包。
+<div class="highlight"><pre><span></span><code>book@100ask:~$ sudo apt-get install -y which sed make binutils build-essential  gcc g++ bash patch gzip bzip2 perl  tar cpio unzip rsync file  bc wget python ncurses5  bazaar cvs git mercurial rsync scp subversion 
+</code></pre></div></li>
+</ul>
+<h2 id="_2">获取源码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>注意：社区版本和百问网提供的版本本质上没有区别，我们只是将其整合增加了更多的软件包配置，并提供整个工程。</p>
+<h3 id="_3">获取社区版本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>使用git命令clone源码
+<div class="highlight"><pre><span></span><code>book@100ask:~$ git clone https://git.buildroot.net/buildroot buildroot-2022
+book@100ask:~$ <span class="nb">cd</span> buildroot-2022 <span class="o">&amp;&amp;</span> git checkout buildroot-2022.02
+</code></pre></div></p>
+</li>
+<li>
+<p>使用wget下载
+<div class="highlight"><pre><span></span><code>book@100ask:~$ wget https://buildroot.org/downloads/buildroot-2022.02.tar.gz
+book@100ask:~$ tar -xvf buildroot-2022.02.tar.gz
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="_4">使用百问网提供的版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>完整压缩版本</p>
+</li>
+<li>
+<p>git仓库版本</p>
+</li>
+</ul>
+<h2 id="_5">编译系统<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>进入 buildroot-2022.02 目录下
+执行 make nezha_defconfig 指定配置文件
+执行 make 命令开始编译。</p>
+<p>等待编译完成会有类似如下输出信息。
+<img alt="Buildroot-2022_MakeCompile_output_001" src="https://cdn.jsdelivr.net/gh/DongshanPI/Docs-Photos@master/DongshanNezhaSTU/Buildroot-2022_MakeCompile_output_001.png" /></p>
+<h2 id="_6">烧写启动<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>windows下使用wind32diskimage工具烧写，Linux下直接使用dd 命令完整写入
+<img alt="NezaD1wind32diskimag" src="https://cdn.jsdelivr.net/gh/DongshanPI/Docs-Photos@master/DongshanNezhaSTU/NezaD1wind32diskimag.png" /></li>
+<li>烧写成功后把卡插入开发板 开发板上电 即可自动从sd卡启动进入系统
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="m">36</span><span class="o">]</span>HELLO! BOOT0 is starting!
+<span class="o">[</span><span class="m">39</span><span class="o">]</span>BOOT0 commit :
+<span class="o">[</span><span class="m">41</span><span class="o">]</span><span class="nb">set</span> pll start
+<span class="o">[</span><span class="m">43</span><span class="o">]</span>periph0 has been enabled
+<span class="o">[</span><span class="m">46</span><span class="o">]</span><span class="nb">set</span> pll end
+<span class="o">[</span><span class="m">47</span><span class="o">]</span>board init ok
+<span class="o">[</span><span class="m">49</span><span class="o">]</span>DRAM only have internal ZQ!!
+<span class="o">[</span><span class="m">52</span><span class="o">]</span>get_pmu_exist<span class="o">()</span> <span class="o">=</span> -1
+<span class="o">[</span><span class="m">54</span><span class="o">]</span>ddr_efuse_type: 0x0
+<span class="o">[</span><span class="m">57</span><span class="o">][</span>AUTO DEBUG<span class="o">]</span> single rank and full DQ!
+<span class="o">[</span><span class="m">61</span><span class="o">]</span>ddr_efuse_type: 0x0
+<span class="o">[</span><span class="m">64</span><span class="o">][</span>AUTO DEBUG<span class="o">]</span> rank <span class="m">0</span> <span class="nv">row</span> <span class="o">=</span> <span class="m">15</span>
+<span class="o">[</span><span class="m">67</span><span class="o">][</span>AUTO DEBUG<span class="o">]</span> rank <span class="m">0</span> <span class="nv">bank</span> <span class="o">=</span> <span class="m">8</span>
+<span class="o">[</span><span class="m">70</span><span class="o">][</span>AUTO DEBUG<span class="o">]</span> rank <span class="m">0</span> page <span class="nv">size</span> <span class="o">=</span> <span class="m">2</span> KB
+<span class="o">[</span><span class="m">74</span><span class="o">]</span>DRAM BOOT DRIVE INFO: V0.24
+<span class="o">[</span><span class="m">77</span><span class="o">]</span>DRAM <span class="nv">CLK</span> <span class="o">=</span> <span class="m">792</span> MHz
+<span class="o">[</span><span class="m">79</span><span class="o">]</span>DRAM <span class="nv">Type</span> <span class="o">=</span> <span class="m">3</span> <span class="o">(</span><span class="m">2</span>:DDR2,3:DDR3<span class="o">)</span>
+<span class="o">[</span><span class="m">82</span><span class="o">]</span>DRAMC ZQ value: 0x7b7bfb
+<span class="o">[</span><span class="m">85</span><span class="o">]</span>DRAM ODT value: 0x42.
+<span class="o">[</span><span class="m">88</span><span class="o">]</span>ddr_efuse_type: 0x0
+<span class="o">[</span><span class="m">91</span><span class="o">]</span>DRAM <span class="nv">SIZE</span> <span class="o">=</span><span class="m">512</span> M
+<span class="o">[</span><span class="m">94</span><span class="o">]</span>DRAM simple <span class="nb">test</span> OK.
+<span class="o">[</span><span class="m">96</span><span class="o">]</span>dram <span class="nv">size</span> <span class="o">=</span><span class="m">512</span>
+<span class="o">[</span><span class="m">98</span><span class="o">]</span>card no is <span class="m">0</span>
+<span class="o">[</span><span class="m">100</span><span class="o">]</span>sdcard <span class="m">0</span> line count <span class="m">4</span>
+<span class="o">[</span><span class="m">102</span><span class="o">][</span>mmc<span class="o">]</span>: mmc driver ver <span class="m">2021</span>-04-2 <span class="m">16</span>:45
+<span class="o">[</span><span class="m">111</span><span class="o">][</span>mmc<span class="o">]</span>: Wrong media <span class="nb">type</span> 0x0
+<span class="o">[</span><span class="m">114</span><span class="o">][</span>mmc<span class="o">]</span>: ***Try SD card <span class="m">0</span>***
+<span class="o">[</span><span class="m">133</span><span class="o">][</span>mmc<span class="o">]</span>: HSSDR52/SDR25 <span class="m">4</span> bit
+<span class="o">[</span><span class="m">136</span><span class="o">][</span>mmc<span class="o">]</span>: <span class="m">50000000</span> Hz
+<span class="o">[</span><span class="m">138</span><span class="o">][</span>mmc<span class="o">]</span>: <span class="m">30436</span> MB
+<span class="o">[</span><span class="m">140</span><span class="o">][</span>mmc<span class="o">]</span>: ***SD/MMC <span class="m">0</span> init OK!!!***
+<span class="o">[</span><span class="m">178</span><span class="o">]</span>Loading boot-pkg Succeed<span class="o">(</span><span class="nv">index</span><span class="o">=</span><span class="m">0</span><span class="o">)</span>.
+<span class="o">[</span><span class="m">182</span><span class="o">]</span><span class="nv">Entry_name</span>        <span class="o">=</span> opensbi
+<span class="o">[</span><span class="m">185</span><span class="o">]</span><span class="nv">Entry_name</span>        <span class="o">=</span> dtb
+<span class="o">[</span><span class="m">188</span><span class="o">]</span><span class="nv">Entry_name</span>        <span class="o">=</span> u-boot
+<span class="o">[</span><span class="m">191</span><span class="o">]</span>Jump to second Boot.
+
+OpenSBI v0.9
+   ____                    _____ ____ _____
+  / __ <span class="se">\ </span>                 / ____<span class="p">|</span>  _ <span class="se">\_</span>   _<span class="p">|</span>
+ <span class="p">|</span> <span class="p">|</span>  <span class="p">|</span> <span class="p">|</span>_ __   ___ _ __ <span class="p">|</span> <span class="o">(</span>___ <span class="p">|</span> <span class="p">|</span>_<span class="o">)</span> <span class="o">||</span> <span class="p">|</span>
+ <span class="p">|</span> <span class="p">|</span>  <span class="p">|</span> <span class="p">|</span> <span class="s1">&#39;_ \ / _ \ &#39;</span>_ <span class="se">\ \_</span>__ <span class="se">\|</span>  _ &lt; <span class="p">|</span> <span class="p">|</span>
+ <span class="p">|</span> <span class="p">|</span>__<span class="p">|</span> <span class="p">|</span> <span class="p">|</span>_<span class="o">)</span> <span class="p">|</span>  __/ <span class="p">|</span> <span class="p">|</span> <span class="p">|</span>____<span class="o">)</span> <span class="p">|</span> <span class="p">|</span>_<span class="o">)</span> <span class="o">||</span> <span class="p">|</span>_
+  <span class="se">\_</span>___/<span class="p">|</span> .__/ <span class="se">\_</span>__<span class="p">|</span>_<span class="p">|</span> <span class="p">|</span>_<span class="p">|</span>_____/<span class="p">|</span>____/_____<span class="p">|</span>
+        <span class="p">|</span> <span class="p">|</span>
+        <span class="p">|</span>_<span class="p">|</span>
+
+Platform Name             : Allwinner D1 NeZha
+Platform Features         : medeleg
+Platform HART Count       : <span class="m">1</span>
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 24000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform Reboot Device    : sunxi-wdt-reset
+Platform Shutdown Device  : ---
+Firmware Base             : 0x40000000
+Firmware Size             : <span class="m">248</span> KB
+Runtime SBI Version       : <span class="m">0</span>.3
+
+Domain0 Name              : root
+Domain0 Boot HART         : <span class="m">0</span>
+Domain0 HARTs             : <span class="m">0</span>*
+Domain0 Region00          : 0x0000000014008000-0x000000001400bfff <span class="o">(</span>I<span class="o">)</span>
+Domain0 Region01          : 0x0000000014000000-0x0000000014007fff <span class="o">(</span>I<span class="o">)</span>
+Domain0 Region02          : 0x0000000040000000-0x000000004003ffff <span class="o">()</span>
+Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff <span class="o">(</span>R,W,X<span class="o">)</span>
+Domain0 Next Address      : 0x000000004a000000
+Domain0 Next Arg1         : 0x0000000044000000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+
+Boot HART ID              : <span class="m">0</span>
+Boot HART Domain          : root
+Boot HART ISA             : rv64imafdcvsux
+Boot HART Features        : scounteren,mcounteren,mcountinhibit,time
+Boot HART PMP Count       : <span class="m">16</span>
+Boot HART PMP Granularity : <span class="m">2048</span>
+Boot HART PMP Address Bits: <span class="m">38</span>
+Boot HART MHPM Count      : <span class="m">0</span>
+Boot HART MIDELEG         : 0x0000000000000222
+Boot HART MEDELEG         : 0x000000000000b109
 
 
+U-Boot <span class="m">2021</span>.10 <span class="o">(</span>Mar <span class="m">24</span> <span class="m">2022</span> - <span class="m">11</span>:08:02 +0000<span class="o">)</span>
+
+DRAM:  <span class="m">512</span> MiB
+WDT:   Started watchdog@6011000 with servicing <span class="o">(</span>16s timeout<span class="o">)</span>
+MMC:   mmc@4020000: <span class="m">0</span>, mmc@4021000: <span class="m">1</span>
+Loading Environment from nowhere... OK
+In:    serial@2500000
+Out:   serial@2500000
+Err:   serial@2500000
+Net:
+Warning: ethernet@4500000 <span class="o">(</span>eth0<span class="o">)</span> using random MAC address - a6:72:3c:ad:2f:47
+eth0: ethernet@4500000
+Hit any key to stop autoboot:  <span class="m">0</span>
+switch to partitions <span class="c1">#0, OK</span>
+mmc0 is current device
+Scanning mmc <span class="m">0</span>:1...
+Found /boot/extlinux/extlinux.conf
+Retrieving file: /boot/extlinux/extlinux.conf
+<span class="m">134</span> bytes <span class="nb">read</span> <span class="k">in</span> <span class="m">2</span> ms <span class="o">(</span><span class="m">65</span>.4 KiB/s<span class="o">)</span>
+<span class="m">1</span>:      linux
+Retrieving file: /boot/Image
+<span class="m">15509024</span> bytes <span class="nb">read</span> <span class="k">in</span> <span class="m">1330</span> ms <span class="o">(</span><span class="m">11</span>.1 MiB/s<span class="o">)</span>
+append: <span class="nv">console</span><span class="o">=</span>ttyS0,115200 <span class="nv">root</span><span class="o">=</span>/dev/mmcblk0p1 ro rootwait
+Retrieving file: /boot/sun20i-d1-nezha.dtb
+<span class="m">24602</span> bytes <span class="nb">read</span> <span class="k">in</span> <span class="m">6</span> ms <span class="o">(</span><span class="m">3</span>.9 MiB/s<span class="o">)</span>
+<span class="c1">## Flattened Device Tree blob at 4fa00000</span>
+   Booting using the fdt blob at 0x4fa00000
+   Loading Device Tree to 0000000049ff6000, end 0000000049fff019 ... OK
+
+Starting kernel ...
+
+<span class="o">[</span>    <span class="m">0</span>.000000<span class="o">]</span> Linux version <span class="m">5</span>.14.0-rc4 <span class="o">(</span>book@100ask<span class="o">)</span> <span class="o">(</span>riscv64-buildroot-linux-uclibc-gcc.br_real <span class="o">(</span>Buildroot <span class="m">2022</span>.02<span class="o">)</span> <span class="m">10</span>.3.0, GNU ld <span class="o">(</span>GNU Binutils<span class="o">)</span> <span class="m">2</span>.36.1<span class="o">)</span> <span class="c1">#1 PREEMPT Thu Mar 24 11:08:54 UTC 2022</span>
+</code></pre></div></li>
+</ul>
 
               
             </article>

@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#buildroot-2021tina-linux" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -416,10 +421,70 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Buildroot2021开发指南
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Buildroot2021开发指南
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    编译完整系统或者各个部分
+  </a>
+  
+    <nav class="md-nav" aria-label="编译完整系统或者各个部分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    构建完整系统镜像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    单独编译各个部分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    烧写启动
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1558,6 +1623,66 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    编译完整系统或者各个部分
+  </a>
+  
+    <nav class="md-nav" aria-label="编译完整系统或者各个部分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    构建完整系统镜像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    单独编译各个部分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    烧写启动
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1569,9 +1694,75 @@
 
 
 
-  <h1>Buildroot2021开发指南</h1>
-
-
+<h1 id="buildroot-2021tina-linux">使用buildroot-2021编译构建Tina-Linux最小系统<a class="headerlink" href="#buildroot-2021tina-linux" title="Permanent link">&para;</a></h1>
+<ul>
+<li>已实现功能</li>
+<li>支持平头哥 rv64d外部工具链。</li>
+<li>支持buildroot构建 Tina  sdk 内 Thead c910 opensbi 。</li>
+<li>支持buildroot 构建Tina  sdk 内 u-boot 2018</li>
+<li>支持buildroot构建Linux kernel 5.4自动生成Image并后续打包为boot.img</li>
+<li>自动构建并打包生成SD卡 busybox udev最小系统启动。</li>
+</ul>
+<h2 id="_1">编译完整系统或者各个部分<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>我们编译使用的是ubuntu 18.04 系统，在进行如下编译之前需要先配置基本编译环境，参考下述命令来安装必须的软件包。</li>
+</ul>
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~/Neza-D1/buildroot-2021$ sudo apt-get install -y which sed make binutils build-essential  gcc g++ bash patch gzip bzip2 perl  tar cpio unzip rsync file  bc wget python ncurses5  bazaar cvs git mercurial rsync scp subversion android-tools-mkbootimg
+</code></pre></div>
+<ul>
+<li>使用git命令clone源码</li>
+</ul>
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~$ mkdir -p  ~/Neza-D1/ <span class="o">&amp;&amp;</span>  <span class="nb">cd</span> ~/Neza-D1/
+book@virtual-machine:~/Neza-D1$ git clone https://gitee.com/weidongshan/neza-d1-buildroot.git buildroot-2021
+</code></pre></div>
+<h3 id="_2">构建完整系统镜像<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>编译完整系统镜像</li>
+</ul>
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~/Neza-D1/buildroot-2021$ make  neza-d1_defconfig  //加载配置文件 
+book@virtual-machine:~/Neza-D1/buildroot-2021$ make  all //完整编译系统
+</code></pre></div>
+<ul>
+<li>编译生成的系统镜像在output/image目录下，其中sdcard.img为完整的系统镜像。</li>
+</ul>
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~/Neza-D1/buildroot-2021/output/images$ ls
+board.dtb         boot.img          boot_package.fex  boot.vfat      env.cfg  fw_dynamic.bin  fw_jump.bin  Image        rootfs.cpio     rootfs.ext2  rootfs.tar  sunxi.fex              uImage
+boot0_sdcard.fex  boot_package.cfg  boot.scr          dragonsecboot  env.fex  fw_dynamic.elf  fw_jump.elf  ramdisk.img  rootfs.cpio.gz  rootfs.ext4  sdcard.img  u-boot-sun20iw1p1.bin
+book@virtual-machine:~/Neza-D1/buildroot-2021/output/images$
+</code></pre></div>
+<h3 id="_3">单独编译各个部分<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>单独编译 opensbi阶段
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~/Neza-D1/buildroot-2021$  make opensbi-rebuild <span class="nv">V</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>单独编译 uboot阶段
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~/Neza-D1/buildroot-2021$  make uboot-rebuild <span class="nv">V</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>单独编译 kernel阶段
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~/Neza-D1/buildroot-2021$  make linux-rebuild <span class="nv">V</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>单独编译文件系统</p>
+</li>
+<li>指定完成工具链 系统配置 需要安装的包 以及所需的格式 执行如下命令，最后生成的镜像在 output/image目录下。
+<div class="highlight"><pre><span></span><code>book@virtual-machine:~/Neza-D1/buildroot-2021$ make  all //完整编译系统
+</code></pre></div></li>
+</ul>
+<h2 id="_4">烧写启动<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>windows下使用wind32diskimage工具烧写，Linux下直接使用dd 命令完整写入</li>
+</ul>
+<p><img alt="NezaD1wind32diskimag" src="https://cdn.jsdelivr.net/gh/DongshanPI/Docs-Photos@master/DongshanNezhaSTU/NezaD1wind32diskimag.png" /></p>
+<ul>
+<li>烧写成功后把卡插入开发板 开发板上电 即可自动从sd卡启动进入系统
+<img alt="nezaD1startupLog" src="https://cdn.jsdelivr.net/gh/DongshanPI/Docs-Photos@master/DongshanNezhaSTU/nezaD1startupLog.png" /></li>
+</ul>
 
               
             </article>
