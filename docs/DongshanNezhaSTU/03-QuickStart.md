@@ -5,8 +5,8 @@
 1. 东山哪吒STU开发板主板 x1
 2. TF卡读卡器  x1
 3. 8GB以上的 micro TF卡 x1
-4. `全志原厂Tina-SDK`烧写所用的烧录工具：点击下载：传输链接：https://cowtransfer.com/s/7536f3b4d23042
-5. SDcard专用格式化工具：点击下载：https://cowtransfer.com/s/b0f773308c6a4f
+4. `全志原厂Tina-SDK`烧写所用的烧录工具：点击下载：https://cowtransfer.com/s/7536f3b4d23042
+5. SDcard专用格式化工具：点击下载: https://dongshanpi.cowtransfer.com/s/0c89eedff85547
 
 ### 烧录`Tina-SDK`镜像
 1. 下载需要的镜像文件：点此传输链接：https://cowtransfer.com/s/b50be87e55ef4c 。下载任意镜像，然后参考下面步骤进行烧写。 

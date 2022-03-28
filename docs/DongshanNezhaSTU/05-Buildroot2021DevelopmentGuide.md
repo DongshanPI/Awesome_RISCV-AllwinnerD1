@@ -39,8 +39,6 @@ boot0_sdcard.fex  boot_package.cfg  boot.scr          dragonsecboot  env.fex  fw
 book@virtual-machine:~/Neza-D1/buildroot-2021/output/images$
 ```
 
-
-
 ### 单独编译各个部分
 
 * 单独编译 opensbi阶段
@@ -63,8 +61,6 @@ book@virtual-machine:~/Neza-D1/buildroot-2021$  make linux-rebuild V=1
 ``` shell
 book@virtual-machine:~/Neza-D1/buildroot-2021$ make  all //完整编译系统
 ```
-
-
 
 ## 烧写启动
 
