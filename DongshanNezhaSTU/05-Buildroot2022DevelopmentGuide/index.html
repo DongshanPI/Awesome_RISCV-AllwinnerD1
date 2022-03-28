@@ -1756,19 +1756,27 @@ book@100ask:~$ tar -xvf buildroot-2022.02.tar.gz
 </ul>
 <h3 id="_4">使用百问网提供的版本<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p>完整压缩版本</p>
-</li>
-<li>
-<p>git仓库版本</p>
-</li>
+<li>完整压缩版本
+传输链接：<a href="https://dongshanpi.cowtransfer.com/s/6cbc58bbc68045">https://dongshanpi.cowtransfer.com/s/6cbc58bbc68045</a>
+下载后拷贝到 ubuntu系统内，执行 <code>tar -xvf buildroot-2022.02.tar.gz</code>解压缩。
+解压完成以后，就可以继续参考下面步骤进行编译系统。</li>
+<li>git仓库版本</li>
 </ul>
 <h2 id="_5">编译系统<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>进入 buildroot-2022.02 目录下
-执行 make nezha_defconfig 指定配置文件
-执行 make 命令开始编译。</p>
-<p>等待编译完成会有类似如下输出信息。
-<img alt="Buildroot-2022_MakeCompile_output_001" src="https://cdn.jsdelivr.net/gh/DongshanPI/Docs-Photos@master/DongshanNezhaSTU/Buildroot-2022_MakeCompile_output_001.png" /></p>
+<p>1.进入解压缩的 buildroot-2022.02目录下。
+<div class="highlight"><pre><span></span><code>book@100ask:~$ <span class="nb">cd</span> buildroot-2022.02
+</code></pre></div>
+2.执行 make nezha_defconfig 指定配置文件
+<div class="highlight"><pre><span></span><code>book@100ask:~/buildroot-2022.02$ make nezha_defconfig
+</code></pre></div></p>
+<ol>
+<li>执行 make 命令开始编译。
+<div class="highlight"><pre><span></span><code>book@100ask:~/buildroot-2022.02$ make <span class="nv">V</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+等待编译完成会有类似如下输出信息。
+<img alt="Buildroot-2022_MakeCompile_output_001" src="https://cdn.jsdelivr.net/gh/DongshanPI/Docs-Photos@master/DongshanNezhaSTU/Buildroot-2022_MakeCompile_output_001.png" />
+之后继续参考如下命令执行烧写操作。</li>
+</ol>
 <h2 id="_6">烧写启动<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>windows下使用wind32diskimage工具烧写，Linux下直接使用dd 命令完整写入
