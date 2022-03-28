@@ -31,18 +31,29 @@ book@100ask:~$ tar -xvf buildroot-2022.02.tar.gz
 ```
 ### 使用百问网提供的版本
 * 完整压缩版本
-
+传输链接：https://dongshanpi.cowtransfer.com/s/6cbc58bbc68045
+下载后拷贝到 ubuntu系统内，执行 `tar -xvf buildroot-2022.02.tar.gz`解压缩。
+解压完成以后，就可以继续参考下面步骤进行编译系统。
 * git仓库版本
 
 
 ## 编译系统
-进入 buildroot-2022.02 目录下
-执行 make nezha_defconfig 指定配置文件
-执行 make 命令开始编译。
+1.进入解压缩的 buildroot-2022.02目录下。
+``` shell
+book@100ask:~$ cd buildroot-2022.02
+```
+2.执行 make nezha_defconfig 指定配置文件
+``` shell
+book@100ask:~/buildroot-2022.02$ make nezha_defconfig
+```
 
+3. 执行 make 命令开始编译。
+``` shell
+book@100ask:~/buildroot-2022.02$ make V=1
+```
 等待编译完成会有类似如下输出信息。
 ![Buildroot-2022_MakeCompile_output_001](https://cdn.jsdelivr.net/gh/DongshanPI/Docs-Photos@master/DongshanNezhaSTU/Buildroot-2022_MakeCompile_output_001.png)
-
+之后继续参考如下命令执行烧写操作。
 ## 烧写启动
 * windows下使用wind32diskimage工具烧写，Linux下直接使用dd 命令完整写入
 ![NezaD1wind32diskimag](https://cdn.jsdelivr.net/gh/DongshanPI/Docs-Photos@master/DongshanNezhaSTU/NezaD1wind32diskimag.png)
