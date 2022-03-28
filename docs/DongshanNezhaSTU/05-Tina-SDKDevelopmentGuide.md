@@ -3,6 +3,7 @@
 
 ## 获取配套开发文档
 Tina-SDK提供的配套开发资料非常丰富，有驱动开发有组件开发等，大家可以直接点击下方的链接进行下载。
+
 * 传输链接：https://dongshanpi.cowtransfer.com/s/734005e89c9c43
 
 ## 获取Tina-SDK源码
@@ -36,10 +37,10 @@ sudo apt-get install libc6:i386 libstdc++6:i386 lib32ncurses5 lib32z1
 4. 配置好方案名称后，就可以执行 `make`命令来开始编译了，整个编译过程比较漫长，可以加上 **-JN **参数来加速编译，这里**N**指的是CPU的个数一般可以以 CPU个数 x 线程数 进行指定。
 5. 编译完成后，相应的文件会输出到 **/out/d1_nezha-tina/** 目录下，之后我们继续执行 `pack`打包命令，来进行打包操作。
 ```shell
-book@virtual-machine:~$ cd tina-d1-h/
-book@virtual-machine:~/tina-d1-h$ source build/envsetup.sh
+book@100ask:~$ cd tina-d1-h/
+book@100ask:~/tina-d1-h$ source build/envsetup.sh
 Setup env done! Please run lunch next.
-book@virtual-machine:~/tina-d1-h$ lunch
+book@100ask:~/tina-d1-h$ lunch
 
 You're building on Linux
 
@@ -64,7 +65,7 @@ TARGET_CHIP=sun20iw1p1
 ============================================
 no buildserver to clean
 [1] 20070
-book@virtual-machine:~/tina-d1-h$ make -j16
+book@100ask:~/tina-d1-h$ make -j16
 
 ```
 如上示例，我进入 tina-d1-h 目录 之后使用lunch命令 显示所有的支持方案，选中 第二个 d1-h_nezha-tina 之后 执行 make -j16开始编译，这里给大家提醒一下 我们的 **东山哪吒STU** 开发板支持 方案**1. d1-h_nezha_min-tina** 方案**2. d1-h_nezha-tina**。
@@ -76,5 +77,13 @@ book@virtual-machine:~/tina-d1-h$ make -j16
 
 ## 获取交叉编译工具链
 Tina-SDK可以使用专门的配套教程编译工具链 单独编译组件，编译内核驱动 或者 编写相应的应用程序，可以直接点击链接进行下载。
+
 * 传输链接：https://dongshanpi.cowtransfer.com/s/2b0439d7171b43
-下载成功后，拷贝到ubuntu系统内，执行 `tar -xvf riscv64-glibc-gcc-thead_20200702.tar.xz`进行解压缩，等待解压缩完成后，可以执行如下命令设置环境变量。
+
+下载成功后，拷贝到ubuntu系统内，执行 `tar -xvf riscv64-glibc-gcc-thead_20200702.tar.xz`进行解压缩，等待解压缩完成后，可以执行如下命令设置环境变量,比如解压到 家目录下 也就是/home/book目录。则单独执行`tar -xvf riscv64-glibc-gcc-thead_20200702.tar.xz -C ~`。
+之后执行如下命令在终端下执行环境变量，再设计之前需要您确认没有设置其它的环境变量。
+```shell
+book@100ask:~$ export ARCH=riscv
+book@100ask:~$ export CROSS_COMPILE=riscv64-unknown-linux-gnu-
+book@100ask:~$ export PATH=$PATH:/home/book/riscv64-glibc-gcc-thead_20200702/bin
+```
