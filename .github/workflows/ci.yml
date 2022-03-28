@@ -1,41 +1,16 @@
-name: Build docs.
-
+name: Build docs
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - "**"
-
-env:
-  FORCE_COLOR: 2
-  NODE: 16
-  PYTHON_VERSION: "3.8"
-
+      - main
 jobs:
-  Build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
         with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: "${{ env.PYTHON_VERSION }}"
-          architecture: "x64"
-          cache: pip
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "${{ env.NODE }}"
-          cache: npm
-
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-        
-      - name: Push Docs
-        run: mkdocs gh-deploy --force
+          python-version: 3.x
+      - run: pip install -r requirements.txt
+      - run: mkdocs gh-deploy --force        
