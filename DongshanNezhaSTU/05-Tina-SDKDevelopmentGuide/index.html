@@ -436,10 +436,17 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    获取源码
+    获取配套开发文档
   </a>
   
-    <nav class="md-nav" aria-label="获取源码">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tina-sdk_1" class="md-nav__link">
+    获取Tina-SDK源码
+  </a>
+  
+    <nav class="md-nav" aria-label="获取Tina-SDK源码">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -498,6 +505,13 @@
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     打包&amp;烧写
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    获取交叉编译工具链
   </a>
   
 </li>
@@ -1678,10 +1692,17 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    获取源码
+    获取配套开发文档
   </a>
   
-    <nav class="md-nav" aria-label="获取源码">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tina-sdk_1" class="md-nav__link">
+    获取Tina-SDK源码
+  </a>
+  
+    <nav class="md-nav" aria-label="获取Tina-SDK源码">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1744,6 +1765,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    获取交叉编译工具链
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1766,7 +1794,10 @@
 <ul>
 <li>Tina-SDK开发HOST主机环境主要基于ubuntu-16.04及以上系统，其它系统暂未做过验证，请尽量使用 ubuntu-18.04。</li>
 </ul>
-<h2 id="_1">获取源码<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">获取配套开发文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Tina-SDK提供的配套开发资料非常丰富，有驱动开发有组件开发等，大家可以直接点击下方的链接进行下载。
+* 传输链接：<a href="https://dongshanpi.cowtransfer.com/s/734005e89c9c43">https://dongshanpi.cowtransfer.com/s/734005e89c9c43</a></p>
+<h2 id="tina-sdk_1">获取Tina-SDK源码<a class="headerlink" href="#tina-sdk_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">网盘获取<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>由于整个<code>Tina-SDK V2.0</code>工程比较大，所以我们单独将其分卷压缩存放至 网盘内，可以点击此 传输链接获取：<a href="https://cowtransfer.com/s/adad917a1e5f43">https://cowtransfer.com/s/adad917a1e5f43</a> </li>
@@ -1828,8 +1859,12 @@ book@virtual-machine:~/tina-d1-h$ make -j16
 </code></pre></div>
 如上示例，我进入 tina-d1-h 目录 之后使用lunch命令 显示所有的支持方案，选中 第二个 d1-h_nezha-tina 之后 执行 make -j16开始编译，这里给大家提醒一下 我们的 <strong>东山哪吒STU</strong> 开发板支持 方案<strong>1. d1-h_nezha_min-tina</strong> 方案<strong>2. d1-h_nezha-tina</strong>。</p>
 <h2 id="_6">打包&amp;烧写<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>编译完成后，我们就可以执行 <code>pack</code>命令，将编译好的固件打包成一个 img 文件，用于后续烧写操作，固件路径在** /out/d1_nezha-tina/tina_d1-nezha_uart0.img** 以 方案名称_串口节点.img 进行命名。
+<p>编译完成后，我们就可以执行 <code>pack</code>命令，将编译好的固件打包成一个 img 文件，用于后续烧写操作，固件路径在 <strong>/out/d1_nezha-tina/tina_d1-nezha_uart0.img</strong> 以 方案名称_串口节点.img 进行命名。
 最后我们就可以参考页面左侧 <code>快速开始</code> 内 烧写 全志原厂 系统的说明文档进行烧写操作啦。</p>
+<h2 id="_7">获取交叉编译工具链<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>Tina-SDK可以使用专门的配套教程编译工具链 单独编译组件，编译内核驱动 或者 编写相应的应用程序，可以直接点击链接进行下载。
+* 传输链接：<a href="https://dongshanpi.cowtransfer.com/s/2b0439d7171b43">https://dongshanpi.cowtransfer.com/s/2b0439d7171b43</a>
+下载成功后，拷贝到ubuntu系统内，执行 <code>tar -xvf riscv64-glibc-gcc-thead_20200702.tar.xz</code>进行解压缩，等待解压缩完成后，可以执行如下命令设置环境变量。</p>
 
               
             </article>
